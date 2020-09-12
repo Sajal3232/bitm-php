@@ -4,26 +4,42 @@
 
 
 
-$firstnumber=$_POST['firstNumber'];
-$lastnumber=$_POST['lastNumber'];
+$firstnumber=$_POST["firstNumber"];
+$lastnumber=$_POST["lastNumber"];
  $btn=$_POST['btn'];  
-if($btn=="+"){
-    $result=$firstnumber+$lastnumber;
-}
-if($btn=="-"){
-    $result=$firstnumber-$lastnumber;
-}
-if($btn=="*"){
-    $result=$firstnumber*$lastnumber;  
-}
-if($btn=="/"){
-    $result=$firstnumber/$lastnumber;
+ $result="";
+
+// if($btn=="+"){
+//     $result=$firstnumber+$lastnumber;
+// }
+// if($btn=="-"){
+//     $result=$firstnumber-$lastnumber;
+// }
+// if($btn=="*"){
+//     $result=$firstnumber*$lastnumber;  
+// }
+// if($btn=="/"){
+//     $result=$firstnumber/$lastnumber;
+
+// }
+
+switch($btn){
+    case '+':
+        $result=$firstnumber+$lastnumber;
+    break;
+    case '-':
+        $result=$firstnumber-$lastnumber;
+    break;
+    case '*':
+        $result=$firstnumber*$lastnumber;
+    break;
+    case '/':
+        $result=$firstnumber/$lastnumber;
+    break;
 
 }
 
-
-
-?>
+?>d
 
 
 
